@@ -22,13 +22,18 @@ public class EnvController {
     }
     @GetMapping("/env")
     public Map<String, String> getEnv() {
-        Map<String, String> env = new HashMap<>();
+        /*Map<String, String> env = new HashMap<>();
 
         env.put("PORT", port);
         env.put("MEMORY_LIMIT", memoryLimit);
         env.put("CF_INSTANCE_INDEX", cfInstanceIndex);
         env.put("CF_INSTANCE_ADDR", cfInstanceAddress);
-        return env;
+        return env*/
+
+        return Map.of("PORT", port,
+                "MEMORY_LIMIT", memoryLimit, "CF_INSTANCE_INDEX", cfInstanceIndex,
+        "CF_INSTANCE_ADDR", cfInstanceAddress);
+
 
     }
 }
