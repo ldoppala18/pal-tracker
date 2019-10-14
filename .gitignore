@@ -2,5 +2,6 @@ build
 .gradle
 .idea
 out
+.bat
 *.iml
 ci/variables.yml
