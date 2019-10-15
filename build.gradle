@@ -5,10 +5,12 @@ buildscript {
 
     repositories {
         mavenCentral()
+
     }
 
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+
     }
 }
 
@@ -19,6 +21,7 @@ plugins {
 
 apply plugin: 'org.springframework.boot'
 
+
 repositories {
     mavenCentral()
 }
@@ -26,8 +29,11 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    testCompile("org.mockito:mockito-core:2.23.4")
 }
 
 bootRun.environment(["WELCOME_MESSAGE": "hello from gradle file",])
 
 test.environment(["WELCOME_MESSAGE": "Hello from test",])
+
+
